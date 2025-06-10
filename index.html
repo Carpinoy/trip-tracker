@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carpinoy Trip Tracker for Haulers</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Header/Landing -->
+    <header class="main-header">
+      <h1>Carpinoy Trip Tracker for Haulers</h1>
+      <p class="subtitle">Monitor your deliveries easily and securely</p>
+    </header>
+
+    <!-- Login Form -->
+    <div id="login-container" class="card">
+      <form id="login-form">
+        <h2>Hauler Login</h2>
+        <label>Plate Number:<br>
+          <input type="text" id="plate-number" required autocomplete="username">
+        </label><br>
+        <label>Password:<br>
+          <input type="password" id="password" required autocomplete="current-password">
+        </label><br>
+        <button type="submit" class="btn">Log In</button>
+        <p id="login-error" class="error-msg" style="display:none;">Mali ang plate number o password!</p>
+      </form>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="card" style="display:none;">
+      <div class="dashboard-header">
+        <span id="welcome-plate" class="welcome"></span>
+        <button id="logout-btn" class="btn-logout">Logout</button>
+      </div>
+      <section class="actions">
+        <button id="export-btn" class="btn">Export CSV</button>
+      </section>
+      <section class="table-section">
+        <table id="delivery-table">
+          <thead>
+            <tr>
+              <th>Haulers Name</th>
+              <th>Plate Number</th>
+              <th>Delivery Date</th>
+              <th>Shipment Number</th>
+              <th>Route</th>
+              <th>Drops</th>
+              <th>Type</th>
+              <th>Delivery Checklist #</th>
+              <th>Delivery Rates</th>
+              <th>Billing Date</th>
+              <th>Payout Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data rows by JS -->
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
